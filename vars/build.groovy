@@ -1,6 +1,6 @@
 #!/user/bin/env groovy
 
-def call() {
-    echo "Building the application..."
-    sh "docker build -t ppr88/devops-bootcamp-module08:${env.APP_VERSION} ."
+def call(String imageName) {
+    echo "Building the docker image..."
+    sh "docker build -t $imageName ."
 }
